@@ -47,6 +47,7 @@
         "singleQuote": true,
         "jsxSingleQuote": true,
         "singleAttributePerLine": true,
+        "experimentalTernaries": true,
         "endOfLine": "lf"
       }
     ],
