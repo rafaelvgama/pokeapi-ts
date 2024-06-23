@@ -1,16 +1,17 @@
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { render, screen } from '@testing-library/react'
-import { BrowserRouter } from 'react-router-dom'
 import App from './App'
 
+const queryClient = new QueryClient()
+
 describe('App Component', () => {
-  render(
-    <BrowserRouter>
-      <App />
-    </BrowserRouter>,
-  )
-  it('should render the component properly', () => {
-    expect(screen.getByRole('heading', { level: 1 })).toHaveTextContent(
-      'Hello World',
+  it('renders the Home component', () => {
+    render(
+      <QueryClientProvider client={queryClient}>
+        <App />
+      </QueryClientProvider>,
     )
+
+    expect(screen.getByTestId('Home')).toBeInTheDocument()
   })
 })

@@ -19,24 +19,15 @@ const Card = ({
   loading,
   loadingError,
 }: CardProps) => {
-  let type1 = ''
-  let type2 = ''
-  if (types?.length === 2) {
-    type1 = types[0].type.name
-    type2 = types[1].type.name
-  } else if (types?.length === 1) {
-    type1 = types[0].type.name
-  }
-
   return (
     <Box>
-      <div className='w-80'>
+      <div className=''>
         <div className='relative flex items-center justify-center'>
           {!loading && !loadingError ?
             <img
               src={sprites?.front_default}
               alt='pokémon'
-              className='absolute h-48 w-48'
+              className='absolute h-48 w-48 sm:h-96 sm:w-96'
             />
           : null}
           <img
@@ -53,18 +44,20 @@ const Card = ({
               </h1>
             : null}
 
-            {type1 !== '' ?
-              <span className='mr-2 inline-block text-xs capitalize'>
-                {type1}
-              </span>
-            : null}
-            {type2 !== '' ?
-              <span className='inline-block text-xs capitalize'>{type2}</span>
-            : null}
+            <div className='flex gap-2'>
+              {types?.map((type) => (
+                <span
+                  className='inline-block text-xs capitalize'
+                  key={type.type.name}
+                >
+                  {type.type.name}
+                </span>
+              ))}
+            </div>
           </div>
           {loading ?
             <div>
-              <Loader />
+              <Loader tailwindSize={11} />
             </div>
           : null}
           {loadingError ?

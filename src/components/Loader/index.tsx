@@ -1,9 +1,13 @@
-const Loader = () => {
+type LoaderProps = {
+  tailwindSize: number
+}
+
+const Loader = ({ tailwindSize }: LoaderProps) => {
   return (
     <img
       src='./src/assets/images/spin-loader.gif'
       alt='Loading icon'
-      className='h-11 w-11'
+      className={`h-${tailwindSize} w-${tailwindSize}`}
     />
   )
 }

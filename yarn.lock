@@ -3678,6 +3678,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"lucide-react@npm:^0.390.0":
+  version: 0.390.0
+  resolution: "lucide-react@npm:0.390.0"
+  peerDependencies:
+    react: ^16.5.1 || ^17.0.0 || ^18.0.0
+  checksum: 10c0/d8062c311e703c592c0704d624855b965ba2caa3260f7158f65eb6a63c0826150ac67d35df210d58830bc6d85f8ad0e98e62c7e02e6f9e37690909aa046f64d0
+  languageName: node
+  linkType: hard
+
 "lz-string@npm:^1.5.0":
   version: 1.5.0
   resolution: "lz-string@npm:1.5.0"
@@ -4322,6 +4331,7 @@ __metadata:
     eslint-plugin-react-refresh: "npm:^0.4.6"
     husky: "npm:^9.0.11"
     jsdom: "npm:^24.0.0"
+    lucide-react: "npm:^0.390.0"
     postcss: "npm:^8.4.38"
     prettier: "npm:^3.2.5"
     prettier-plugin-tailwindcss: "npm:^0.5.14"
