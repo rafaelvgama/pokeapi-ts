@@ -9,7 +9,7 @@ export default defineConfig({
   /* Vite config */
   plugins: [react(), tsconfigPaths()],
   server: { port: 3000 },
-  base: '/pokeapi-ts',
+  base: '/',
 
   /* Vitest config */
   test: {
