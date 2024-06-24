@@ -1,15 +1,15 @@
 {
   "name": "pokeapi-ts",
+  "homepage": "https://rafaelvgama.github.io/pokeapi-ts",
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://rafaelvgama.github.io/",
   "scripts": {
     "dev": "vite",
     "test": "vitest",
     "coverage": "vitest run --coverage",
     "build": "tsc && vite build",
-    "predeploy": "npx run build",
+    "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "lint": "tsc && eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
