@@ -1,14 +1,11 @@
-import { ReactNode } from 'react'
+import { PropsWithChildren } from 'react'
 
-type BoxProps = {
-  children: JSX.Element | ReactNode
-}
-
-const Box = ({ children }: BoxProps) => {
+const Box = ({ children, ...props }: PropsWithChildren) => {
   return (
     <div
       data-testid='box-component'
       className='m-4 rounded-md shadow-md md:max-w-[736px]'
+      {...props}
     >
       {children}
     </div>

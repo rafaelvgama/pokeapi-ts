@@ -1,12 +1,11 @@
-import { MouseEventHandler } from 'react'
+import { ComponentProps } from 'react'
 
-type ButtonProps = {
+type ButtonProps = ComponentProps<'button'> & {
   color: 'red' | 'green' | 'blue'
   text: string
-  onClick?: MouseEventHandler
 }
 
-const Button = ({ color, onClick, text }: ButtonProps) => {
+const Button = ({ color, text, ...props }: ButtonProps) => {
   const setColor = (color: string) => {
     switch (color) {
       case 'red':
@@ -31,8 +30,8 @@ const Button = ({ color, onClick, text }: ButtonProps) => {
 
   return (
     <button
-      onClick={onClick}
       className={`w-28 rounded-md px-4 py-2 font-bold text-white shadow-md ${setColor(color)} ${setHoverColor(color)}`}
+      {...props}
     >
       {text}
     </button>
