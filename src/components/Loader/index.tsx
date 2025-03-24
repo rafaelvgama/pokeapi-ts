@@ -7,7 +7,7 @@ type LoaderProps = ComponentProps<'img'> & {
 const Loader = ({ tailwindSize, ...props }: LoaderProps) => {
   return (
     <img
-      src='./public/assets/images/spin-loader.gif'
+      src='/assets/images/spin-loader.gif'
       alt='Loading icon'
       className={`h-${tailwindSize} w-${tailwindSize}`}
       {...props}

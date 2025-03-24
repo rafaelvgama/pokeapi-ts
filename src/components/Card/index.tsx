@@ -31,7 +31,7 @@ const Card = ({
             />
           : null}
           <img
-            src='./public/assets/images/background.jpg'
+            src='/assets/images/background.jpg'
             alt='background'
             className='rounded-t-md'
           />
